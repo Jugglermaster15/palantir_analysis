@@ -42,6 +42,8 @@ This project provides a comprehensive financial analysis of Palantir Technologie
    streamlit run dashboard.py
   ![Palantir Dashboards](https://github.com/user-attachments/assets/472a1317-7072-4873-b3b0-094b50f56759)
 
+https://palantiranalysis-interactive-dashboards.streamlit.app/
+
 Additional Analysis
 The SWOT analysis and conclusion are embedded in the Streamlit app under the "Additional Analysis" section.
 
