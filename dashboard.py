@@ -278,6 +278,86 @@ ax.legend()
 ax.grid()
 st.pyplot(fig)
 
+st.title("Real-Time Market Share Comparison")
+
+# Define the tickers for Palantir and its competitors
+tickers = {
+    "Palantir": "PLTR",
+    "Salesforce": "CRM",  
+    "Microsoft": "MSFT",  
+    "Google": "GOOGL",
+    "Amazon": "AMZN",   
+    "IBM": "IBM",    
+    "Oracle": "ORCL",  
+    "SAP": "SAP",   
+    "Snowflake": "SNOW", 
+    "Slack": "WORK"   
+}
+
+# Fetch real-time market caps
+market_caps = {}
+for company, ticker in tickers.items():
+    stock = yf.Ticker(ticker)
+    market_cap = stock.info.get('marketCap', None)
+    if market_cap:
+        market_caps[company] = market_cap
+
+# Convert market caps to a DataFrame
+df = pd.DataFrame(list(market_caps.items()), columns=['Company', 'Market Cap'])
+
+# Calculate market share percentages
+total_market_cap = df['Market Cap'].sum()
+df['Market Share'] = (df['Market Cap'] / total_market_cap) * 100
+
+# Sort by market share
+df = df.sort_values(by='Market Share', ascending=True)  # Sort ascending for better horizontal bar visualization
+
+# Plot the horizontal bar chart
+plt.figure(figsize=(10, 6))
+colors = ['red' if company == 'Palantir' else 'blue' for company in df['Company']]
+plt.barh(df['Company'], df['Market Share'], color=colors)
+plt.title('Real-Time Market Share Comparison (Public Companies)')
+plt.xlabel('Market Share (%)')
+plt.ylabel('Company')
+plt.tight_layout()
+
+# Display the chart in Streamlit
+st.pyplot(plt)
+
+# Display the raw data in a table (optional)
+st.subheader("Raw Data")
+st.dataframe(df)
+
+st.title("Insights on Palantir's Market Position")
+
+# Niche Market Presence
+st.header("Niche Market Presence")
+st.write("""
+Palantir is a specialized data analytics and AI-driven software company, primarily serving government agencies and large enterprises.  
+Its smaller market share reflects its focus on high-value, security-sensitive contracts rather than mass-market cloud solutions.
+""")
+
+# Competition with Established Giants
+st.header("Competition with Established Giants")
+st.write("""
+Companies like **Microsoft, Amazon, and Google** dominate the market with their broad cloud computing and enterprise solutions,  
+making it challenging for Palantir to capture a significant portion of the market.
+""")
+
+# Potential for Growth
+st.header("Potential for Growth")
+st.write("""
+Despite its smaller share, Palantir has a strong reputation for advanced AI analytics and big data solutions,  
+which could drive future expansion, particularly in **defense, finance, and healthcare** sectors.
+""")
+
+# Investment Perspective
+st.header("Investment Perspective")
+st.write("""
+Investors looking at Palantir should consider its unique positioning in the AI and data analytics space,  
+but also recognize the challenge it faces in scaling its commercial sector presence against well-established cloud competitors.
+""")
+
 
 st.title("Personal Investment Section - Palantir Performance")
 
