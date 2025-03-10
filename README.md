@@ -10,6 +10,7 @@ This project provides a comprehensive financial analysis of Palantir Technologie
 - Interactive comparison of Palantir's performance with the S&P 500 since September 30, 2020.
 - Discounted Cash Flow (DCF) valuation.
 - Stock price prediction using machine learning.
+- Market share comparison against top 9 competitors (Public).
 - Personal investment performance tracking.
 - SWOT analysis and conclusion.
 
