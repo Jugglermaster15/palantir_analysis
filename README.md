@@ -26,8 +26,9 @@ This project provides a comprehensive financial analysis of Palantir Technologie
 4. **Market Comparison:** Interactive comparison of Palantir's performance with the S&P 500 since September 30, 2020.
 5. **DCF Valuation:** Estimates Palantir's intrinsic value using the Discounted Cash Flow method.
 6. **Stock Price Prediction:** Predicts closing prices using a linear regression model.
-7. **Personal Investment:** Tracks ROI based on a purchase price of $6.89 on May 11, 2022.
-8. **Additional Analysis:** Includes a SWOT analysis and conclusion.
+7. **Market Share Comparison:** Compares the actual market share of Palantir against other top 9 competitors in the field (Public companies).
+8. **Personal Investment:** Tracks ROI based on a purchase price of $6.89 on May 11, 2022.
+9. **Additional Analysis:** Includes a SWOT analysis and conclusion.
 
 ## Setup
 1. Clone the repository:
