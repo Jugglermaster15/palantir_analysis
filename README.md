@@ -40,17 +40,11 @@ This project provides a comprehensive financial analysis of Palantir Technologie
 3. Install the required libraries:
    ```bash
    pip install -r requirements.txt
-4. Run the Streamlit app:
-   streamlit run dashboard.py
-  ![Palantir Dashboards](https://github.com/user-attachments/assets/472a1317-7072-4873-b3b0-094b50f56759)
-
-https://palantiranalysis-interactive-dashboards.streamlit.app/
-
 Additional Analysis
 The SWOT analysis and conclusion are embedded in the Streamlit app under the "Additional Analysis" section.
 
 Technologies Used
-Python Libraries: yfinance, pandas, numpy, matplotlib, plotly, scikit-learn, streamlit.
+Python Libraries: yfinance, pandas, numpy, matplotlib, plotly, scikit-learn.
 
 Machine Learning: Linear Regression for stock price prediction.
 
