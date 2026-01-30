@@ -42,7 +42,7 @@ This project provides a comprehensive financial analysis of Palantir Technologie
    pip install -r requirements.txt
 4. Run the Palantir interactive dashboard on streamlit:
    ```bash
-   https://palantirdashboard-ppsfa4dembn7xqmdwx5uhf.streamlit.app/
+https://palantirdashboard-ppsfa4dembn7xqmdwx5uhf.streamlit.app/
 Additional Analysis
 The SWOT analysis and conclusion are embedded in the Streamlit app under the "Additional Analysis" section.
 
